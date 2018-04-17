@@ -1,6 +1,0 @@
-ErrorDocument 404 /erreur.php?erreur=404
-ErrorDocument 403 /erreur.php?erreur=403
-AuthName "Version de test de Re:Play"
-AuthType Basic
-AuthUserFile "/home/replay/beta/.htpasswd"
-Require valid-user
