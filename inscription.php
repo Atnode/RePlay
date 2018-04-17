@@ -5,12 +5,8 @@ include_once('ressources/sql.php');
 $titre = "Inscription";
 $description = "S'inscrire sur {$config['site_titre']} vous permet de rejoindre une communauté";
 
-$siteKey = "6Le-4zIUAAAAAL8dDYAJviVJN2QbXvhBGRy_IEFo";
-$secret ="6Le-4zIUAAAAADi6T_dfkF7BJB62mwVklDDLkXn8";
-
 include_once("ressources/head.php");
 include_once("ressources/header.php");
-include_once("ressources/recaptchalib.php");
 
 	if (isset($_SESSION['id']))
 	{
@@ -70,23 +66,6 @@ include_once("ressources/recaptchalib.php");
 				$erreur++;
 			}
 			
-			$reCaptcha = new ReCaptcha($secret);
-			if(isset($_POST["g-recaptcha-response"]))
-			{
-				$resp = $reCaptcha->verifyResponse(
-				$_SERVER["REMOTE_ADDR"],
-				$_POST["g-recaptcha-response"]
-			 );
-    		if ($resp != null && $resp->success)
-    		{
-    			//Captcha Passé
-    		}
-    			else 
-			{
-				$message_erreur = "<p>Captcha incorrect</p>";
-				$erreur++;
-			}
-			}
 			
 			if ($erreur == 0)
 			{
@@ -128,7 +107,6 @@ include_once("ressources/recaptchalib.php");
 				<input class="champ_texte" name="motdepasse" id="motdepasse" type="password" placeholder="Mot de passe" /><br />
 				<input class="champ_texte" name="motdepasse2" id="motdepasse2" type="password" placeholder="Confirme le mot de passe" /><br />
 				<br />
-				<div class="g-recaptcha" data-sitekey="<?php echo $siteKey; ?>" ></div><br />
 				<input class="champ_bouton" type="submit" name="envoyer" value="S'inscrire" />
 			</form>
 		</div>
