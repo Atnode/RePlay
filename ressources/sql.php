@@ -1,7 +1,7 @@
 <?php
 try
 	{
-        $sql = new PDO('mysql:host=localhost;dbname=replay;charset=utf8', 'replay', 'YbXP9vRIRoSLQGHJ1oXK');
+        $sql = new PDO('mysql:host=localhost;dbname=replay;charset=utf8', 'replay', 'PA22W0RD');
 	}
 catch (Exception $e)
 	{
