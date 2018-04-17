@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body
+{
+	margin: 0;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+}
+
+main
+{
+	flex-grow: 1;
+	padding-top: 70px;
+	background-color: #FFF;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+header
+{
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	height: 64px;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: #F4992B;
+}
+#non_membre
+{
+	position: relative;
+	float: right;
+	left: -10px;
+	top: 20px;
+}
+#membre
+{
+	position: absolute;
+	bottom: 47px;
+	right: -10px;
+}
+#membre .pseudo
+{
+	position: absolute;
+	top: -5px;
+	right: 80px;
+}
+#membre .avatar
+{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	top: -10px;
+	right: 20px;
+}
+#membre .mp
+{
+	position: absolute;
+	right: 90px;
+	top: 15px;
+}
+#membre .amis
+{
+	position: absolute;
+	right: 140px;
+	top: 15px;
+}
+#membre .notifs
+{
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	position: absolute;
+	border-radius: 50%;
+	left: 15px;
+	bottom: 15px;
+	font-size: 12px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+footer
+{
+	background-color: #F4992B;
+}
+footer p
+{
+	margin-left: 2%;
+}
+.avatar_profil
+{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.champ_texte
+{
+	margin-bottom: 5px;
+	font-size: 15px;
+	border-radius: 8px;
+	border: 1px solid;
+	border-color: #F4992B;
+	padding: 5px;
+	background-color: #F2F2F2;
+	transition: all 0.5s;
+}
+.champ_texte:hover
+{
+	border-color: #333D3F;
+	background-color: #EAEAEA;
+}
+select
+{
+	margin-bottom: 5px;
+	font-size: 15px;
+	border-radius: 8px;
+	border: 1px solid;
+	border-color: #F4992B;
+	padding: 5px;
+	background-color: #F2F2F2;
+	transition: all 0.5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select:hover
+{
+	border-color: #333D3F;
+	background-color: #EAEAEA;
+}
+.champ_bouton
+{
+	background-color: #333D3F;
+	color: #FFF;
+	border: 1px solid;
+	border-color: #333D3F;
+	padding: 5px;
+	font-weight: bold;
+	transition: all 0.5s;
+}
+.champ_bouton:hover
+{
+	background-color: #585959;
+	border-color: #585959;
+}
+a
+{
+	text-decoration: none;	
+}
+header #non_membre a
+{
+	border: 2px solid;
+	border-color: #333D3F;
+	padding: 10px;
+	background-color: #333D3F;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 24px;
+	transition: all 0.5s;
+}
+header #non_membre a:hover
+{
+	background-color: #585959;
+	border-color: #585959;
+}
+header ul
+{
+	list-style-type: none;
+	position: absolute;
+	top: -14px;
+	left: 60px;
+	font-size: 20px;
+}
+header li
+{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: -5px;
+}
+header li a
+{
+	padding: 20px 10px;
+	color: #FFF;
+	font-weight: normal;
+	transition: all 0.5s;
+}
+header li a:hover
+{
+	background-color: #585959;
+}
+.lien_accueil
+{
+	color: black;
+	z-index: 10;
+	padding: 2px 5px;
+	position: absolute;
+	transition: all 0.5s;
+}
+.lien_accueil:hover
+{
+	background-color: #333D3F;
+	color: #FFF;
+}
+.lien_accueil img
+{
+	position: relative;
+	top: 5px;
+}
+.connexion
+{
+	text-align: center;
+	width: 220px;
+	margin: 10px auto;
+	padding: 20px;
+	padding-top: 5px;
+	background-color: #D3D3D3;
+	border-radius: 10px;
+}
+.inscription
+{
+	text-align: center;
+	width: 350px;
+	margin: 10px auto;
+	padding: 20px;
+	padding-top: 5px;
+	background-color: #D3D3D3;
+	border-radius: 10px;
+}
+#liste_amis
+{
+	background-color: #95A5A6;
+	padding: 10px;
+	width: 300px;
+	border-radius: 10px;
+}
+#liste_amis img
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+#liste_amis .pseudo
+{
+	position: relative;
+	bottom: 70px;
+	left: 10px;
+}
+#liste_amis a
+{
+	position: relative;
+	bottom: 55px;
+	left: 115px;
+}
+#liste_amis_attente
+{
+	background-color: #A3A375;
+	padding: 10px;
+	width: 300px;
+	border-radius: 10px;
+}
+#liste_amis_attente img
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+#liste_amis_attente .pseudo
+{
+	position: relative;
+	bottom: 70px;
+	left: 10px;
+}
+#liste_amis_attente a
+{
+	position: relative;
+	bottom: 55px;
+	left: 115px;
+}
+#liste_amis_requete
+{
+	background-color: #BDC3C7;
+	padding: 10px;
+	width: 300px;
+	border-radius: 10px;
+}
+#liste_amis_requete img
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+#liste_amis_requete .pseudo
+{
+	position: relative;
+	bottom: 70px;
+	left: 10px;
+}
+#liste_amis_requete a
+{
+	position: relative;
+	bottom: 55px;
+	left: 115px;
+}
+.g-recaptcha
+{
+	margin: 0 auto;
+    display: table;
+}
+h1
+{
+	color: #333D3F;
+	font-size: 30px;
+	font-family: "Arial";
+	text-indent: 30px;
+	background-image: url('/ressources/images/h1.png');
+	background-repeat: no-repeat;
+	margin-left: -10px;
+}
+h2
+{
+	color: #F4992B;
+	font-size: 20px;
+	font-family: "Arial";
+	text-indent: 30px;
+	background-image: url('/ressources/images/h2.png');
+	background-repeat: no-repeat;
+	padding: 5px 0 0 0;
+}
+#bbcode span
+{
+	cursor: pointer;
+}
+#chat
+{
+	width: auto;
+	height: auto;
+	padding: 10px;
+	margin: 0 10% 20px 10%;
+}
+#form_chat
+{
+	text-align: center;
+}
+#chat .message
+{
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #BDC3C7;
+	border-radius: 10px;
+}
+#chat .message p
+{
+	word-wrap: break-word;
+}
+#forum .titre_principal
+{
+	font-size: 20px;
+	text-align: center;
+	height: 30px;
+	background-color: #F4992B;
+	color: #333D3F;
+	padding-top: 3px;
+}
+#forum .ss_categories
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	border-bottom: 1px #333D3F solid;
+}
+#forum .ss_categories .infos
+{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+#forum .ss_categories .stats
+{
+	flex: 0.2;
+}
+#forum .ss_categories .dernier_message
+{
+	flex: 0.2;
+}
+a
+{
+	font-weight: bold;
+	color: #333D3F;
+}
+/**
+RESOLUTION >680
+**/
+
+@media screen and (max-width: 680px)
+{
+	
+main
+{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+header
+{
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+header ul
+{
+	display: none;
+}
+}
+
+/**
+ReCaptcha
+**/
+
+@media screen and (max-width: 575px){
+    #rc-imageselect,
+    .g-recaptcha {
+        transform:scale(0.77);
+        transform-origin:0;
+        transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform:scale(0.77);
+        transform:scale(0.77);
+        -webkit-transform-origin:0 0;
+        transform-origin:0 0;
+        margin: 0 auto;
+        display: table;
+    }
+}
+
+/**
+RESOLUTION >480
+**/
+
+@media screen and (max-width: 480px)
+{
+	
+footer
+{
+	padding-bottom: 25%;
+}
+.lien_accueil
+{
+	display: none;
+}
+.inscription
+{
+	width: 250px;
+}
+}
